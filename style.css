@@ -1,0 +1,159 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scrollbar-color: #6990F2 black !important;
+  cursor: url("cursor.png"), auto;
+}
+
+.filesandstuff{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #6990F2;
+}
+
+.blink_me {
+    animation: blinker 2s cubic-bezier(.54,1.08,1,1) infinite;
+}
+
+@keyframes blinker {
+50% {
+  opacity: 0;
+}
+}
+
+::selection{
+  color: #ffffff;
+  background: #6990F2;
+}
+.wrapper{
+  width: 430px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
+}
+.wrapper header{
+  color: #6990F2;
+  font-size: 27px;
+  font-weight: 600;
+  text-align: center;
+}
+.wrapper form{
+  height: 200px;
+  display: flex;
+  margin: 30px 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed #6990F2;
+}
+form :where(i, p){
+  color: #6990F2;
+}
+form i{
+  font-size: 50px;
+}
+form p{
+  cursor: url("hand.png"), auto;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+section .row{
+  padding-inline: 10px !important;
+  margin-bottom: 10px;
+  background: #E9F0FF;
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .row i{
+    overflow-y: hidden;
+  color: #6990F2;
+  font-size: 30px;
+}
+section .details span{
+  font-size: 14px;
+}
+
+.uploaded-area{
+    overflow-y: visible;
+    overflow-x: hidden;
+  max-height: 232px;
+}
+.uploaded-area.onprogress{
+  max-height: 150px;
+}
+.uploaded-area::-webkit-scrollbar{
+  width: 0px;
+}
+.uploaded-area .row .content{
+  display: flex;
+  align-items: flex-start;
+}
+.uploaded-area .row .details{
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+.uploaded-area .row .details .size{
+  color: #404040;
+  font-size: 11px;
+}
+.uploaded-area i.fa-check{
+  font-size: 16px;
+}
+
+.ready-to-download-area{
+    max-height: 232px;
+    overflow-y: visible;
+    overflow-x: hidden;
+  }
+  .ready-to-download-area.onprogress{
+    max-height: 150px;
+  }
+  .ready-to-download-area::-webkit-scrollbar{
+    width: 0px;
+  }
+  .ready-to-download-area .row .content{
+    display: flex;
+    align-items: center;
+  }
+  .ready-to-download-area .row .details{
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+  }
+  .ready-to-download-area .row .details .size{
+    color: #404040;
+    font-size: 11px;
+  }
+  .ready-to-download-area i.fa-check{
+    font-size: 16px;
+  }
+
+  section{
+    width: 100%;
+    cursor: url("hand.png"), auto;
+  }
+
+  body{
+    color: black !important;
+  }
+
+  /* .mouse-trail{
+    color:#404040;
+    background-color: #404040;
+  } */
