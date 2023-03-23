@@ -20,6 +20,21 @@
   background: #6990F2;
 }
 
+.compress-btn{
+  width: 100%;
+  cursor: url("hand.png"), auto !important;
+}
+
+.compress-btn:hover{
+  background: #0c00b6 !important;
+}
+
+.compress-btn:active{
+  background: #000000 !important; 
+  box-shadow: 0 5px #c0c0c0;
+  transform: translateY(4px);
+}
+
 .blink_me {
     animation: blinker 2s cubic-bezier(.54,1.08,1,1) infinite;
 }
@@ -28,6 +43,11 @@
 50% {
   opacity: 0;
 }
+}
+
+.information_message{
+  position:absolute; 
+  width: 100%;
 }
 
 .smallhead{
