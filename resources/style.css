@@ -9,6 +9,7 @@
   overflow-y: hidden;
   scrollbar-color: #6990F2 black !important;
   cursor: url("cursor.png"), auto;
+  user-select: none;
 }
 
 .filesandstuff{
@@ -27,6 +28,11 @@
 50% {
   opacity: 0;
 }
+}
+
+.smallhead{
+  text-align: center;
+  font-size: x-small;
 }
 
 ::selection{
