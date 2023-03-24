@@ -13,9 +13,9 @@
 }
 
 .filesandstuff{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
   min-height: 100vh;
   background: #6990F2;
 }
@@ -176,6 +176,7 @@ section .details span{
   }
 
   body{
+    background: #6990F2 !important;
     color: black !important;
   }
 
