@@ -6,8 +6,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  overflow-y: hidden;
-  scrollbar-color: #6990F2 black !important;
+  scrollbar-color: #310ba3 black !important;
   cursor: url("cursor.png"), auto;
   user-select: none;
 }
@@ -16,7 +15,7 @@
   /* display: flex; */
   /* align-items: center;
   justify-content: center; */
-  min-height: 100vh;
+  min-height: 94vh;
   background: #6990F2;
 }
 
@@ -60,12 +59,19 @@
   background: #6990F2;
 }
 .wrapper{
-  width: 430px;
+  width: auto;
   background: #fff;
   border-radius: 5px;
   padding: 30px;
   box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
 }
+
+@media (min-width: 992px) {
+  .wrapper {
+      width: 430px;
+  }
+}
+
 .wrapper header{
   color: #6990F2;
   font-size: 27px;
