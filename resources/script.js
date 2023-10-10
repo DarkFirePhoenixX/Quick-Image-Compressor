@@ -9,17 +9,19 @@ async function compressImage(blobImg, percent) {
     return dataUrl;
   }
   
+const toastCopy = document.getElementById('liveToast');
+const toastMessage = document.getElementById('toastMessage');
+const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastCopy);
 
     document.querySelector('.compress-btn').addEventListener('click', async() => {
-    document.querySelector('.error_message').innerHTML = ""
-    document.querySelector('.success_message').innerHTML = ""
     document.querySelector('.blink_me').innerHTML = ""
     document.querySelectorAll('.with_scroll').forEach(element => {
       element.scrollTo(0, 0);
     });
     let img = document.getElementById('upload').files[0];
-   if(img == null || img.type != "image/png" && img.type != "image/jpeg"){
-      document.querySelector('.error_message').innerHTML = "Upload an image first!"
+   if(img == null || img.type != "image/png" && img.type != "image/jpeg" && img.type != "image/jpg"){
+        toastMessage.innerHTML = "Upload an image first!";
+            toastBootstrap.show()
     }
     else{
       
@@ -64,7 +66,8 @@ var objectURL = URL.createObjectURL(blob);
                             <i class="fas fa-check"></i>
                           </li>`;
                           document.querySelector('.ready-to-download-area').insertAdjacentHTML("afterbegin", downloadHTML);
-                          document.querySelector('.success_message').innerHTML = "Compression finished!"
+                          toastMessage.innerHTML = "Compression finished!";
+                          toastBootstrap.show()
                           if(document.querySelector('.uploadedImage') != null)
   {  document.querySelector('.uploadedImage').remove();
   document.getElementById('upload').value = ""}
@@ -79,8 +82,9 @@ var objectURL = URL.createObjectURL(blob);
 
 document.getElementById('upload').addEventListener('change',function(){
   let imgType = document.getElementById('upload').files[0];
-  if(imgType.type != "image/png" && imgType.type != "image/jpeg"){
-    document.querySelector('.error_message').innerHTML = "Error. Only png and jpeg files are accepted!"
+  if(imgType.type != "image/png" && imgType.type != "image/jpeg" && imgType.type != "image/jpg"){
+    toastMessage.innerHTML = "Error. Only png and jpeg files are accepted!";
+    toastBootstrap.show()
   }
   else{
   let img = document.getElementById('upload').files[0];
