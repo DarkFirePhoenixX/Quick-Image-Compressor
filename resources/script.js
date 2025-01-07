@@ -60,7 +60,7 @@ var objectURL = URL.createObjectURL(blob);
                               <i class="fas fa-file-alt"></i>
                               <div class="details">
                                 <span class="name">${img.name} • Ready</span>
-                                <span class="size">${formatBytes(parseFloat(compSize.toLocaleString().replace(/,/g, "")))}<a href="${objectURL}" download=${img.name} style='text-decoration: none; cursor: url("resources/hand.png"), auto;' class='text-success ms-3'>Click to download</a></span>
+                                <span class="size">${formatBytes(parseFloat(compSize.toLocaleString().replace(/,/g, "")))}<a href="${objectURL}" download="${img.name}" style='text-decoration: none; cursor: url("resources/hand.png"), auto;' class='text-success ms-3'>Click to download</a></span>
                               </div>
                             </div>
                             <i class="fas fa-check"></i>
